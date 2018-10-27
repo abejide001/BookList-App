@@ -35,8 +35,8 @@ UI.prototype.showAlert = function(message, className) {
     div.appendChild(document.createTextNode(message));
     //insert into the dom
     const container = document.querySelector('.container');
-    const form = document.querySelector('#book-form')
-    container.insertBefore(div, form)
+    const form = document.querySelector('#book-form');
+    container.insertBefore(div, form);
     //set the timeout
     setTimeout(function(){
             div.remove();
@@ -57,7 +57,7 @@ class Store {
         else {
             books = JSON.parse(localStorage.getItem('books'))
         }
-        return books
+        return books;
     }
     static display() {
         const books = Store.get()
